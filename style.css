@@ -1,2 +1,39 @@
-body {background-color: black;}
-h1 {color: white; font: 60px Arial, sans-serif; text-align: center; font-stretch: condensed;}    
+body {
+    background-color: black;
+}
+h1 {
+    color: white; 
+    font: 85px Arial, sans-serif; 
+    text-align: center; 
+    transform: scale(0.5, 1);
+    padding-top: 0px;
+}
+header {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+}
+div {
+    color: white;
+}
+p {
+    color: white;
+    font: Arial, sans-serif;
+    transform: scale(0.5, 1);
+    font-size: 100px;
+    padding-bottom: 0px ;
+}
+h2 {
+    color: white;
+    font: Arial, sans-serif;
+    transform: scale(0.5, 1);
+    font-size: 20px;
+    padding-bottom: 0px ;
+}
+button {
+    background-color: black;
+    border-style: none;
+    size: 100px;
+    padding: 0px;
+}

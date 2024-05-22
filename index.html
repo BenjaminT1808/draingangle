@@ -1,50 +1,62 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="dg.png">
-<title>Drain Gangle - Ben Trosman</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="dg.png">
+  <script src="jquery.js">window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+}</script>
+  
+  <title>Bladeele</title>
 </head>
 <body>
-<h1> Drain Gangle </h1>
+  <header>
+    <ul>
+      <li><button><p>?</p></button></li>
+      <li><button><p>About Me</p></button></li>
+    </ul>
+  </header>
+  <h1> Bladeele </h1>
+  
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Songs" style="text-align: center;">
+  
+  <ul class="myUL">
+    <li><button><h2>Be Nice 2 Me</h2></button></li>
+    <li><button>Skin</button></li>
+    <li><button>Be Nice 2 Me</button></li>
+    <li><button>Be Nice 2 Me</button></li>
+  </ul> 
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." style="text-align: center;">
-
-<ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-  <li><a href="#">Arnav Sawant</a></li>
-  <li><a href="#">Benjamin Trosman</a></li>
-</ul>
-
-
-
-<script>
+  <script>
+    const listItems = index.querySelectorAll('.myUL li');
+    for (i = 0; i < listItems; i++) { 
+      listItems[i].hide();
+    }
     function myFunction() {
-        var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById('myInput');
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myUL");
-        li = ul.getElementsByTagName('li');
-      
-        for (i = 0; i < li.length; i++) {
-          a = li[i].getElementsByTagName("a")[0];
-          txtValue = a.textContent || a.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-          } else {
-            li[i].style.display = "none";
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+
+         for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("button")[0];
+            txtValue = a.textContent || a.innerText;
+           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
           }
-        }
-      }
-</script>
+       }
+  </script>
 </body>
 </html>
